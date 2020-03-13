@@ -12,4 +12,5 @@ First attempt uses the embedded wasm approach where we inlude the built wasm wit
 * `src/app/assembly/stats_client_wasm_b.wasm`
 * `src/app/assembly/stats_client_wasm.js`
 
+The WebAssembly component used is stored here: https://github.com/anthonyikeda/stats-client
 
