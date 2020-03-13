@@ -9,6 +9,7 @@ This is a base for attempting to determine how to use WebAssembly with Angular 9
 
 First attempt uses the embedded wasm approach where we inlude the built wasm with the Angular app:
 
-* `src/app/wasm/stats_client_wasm_b.wasm`
-* `src/assets/stats_client_wasm.js`
+* `src/app/assembly/stats_client_wasm_b.wasm`
+* `src/app/assembly/stats_client_wasm.js`
+
 
