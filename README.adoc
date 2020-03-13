@@ -24,3 +24,11 @@ Here are some articles and repos that I've been using to try and make this work.
 * https://prestonrichey.com/blog/react-rust-wasm/
 * https://github.com/ballercat/wasm-loader
 * https://malcoded.com/posts/web-assembly-angular/
+
+== WebAssembly Component
+
+The WebAssembly was packaged with https://rustwasm.github.io/wasm-pack/[wasm-pack] and targetted to `web` as the compilation.
+
+The `stats_client_wasm.js` and `stats_client_wasm_d.wasm` files were then copied to the `src/app/assembly` directory.
+
+There is also a nodejs packaged version attached to the package.json but not imported into the project just yet - got to work out how to use it.
