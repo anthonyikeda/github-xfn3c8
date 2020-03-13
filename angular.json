@@ -21,7 +21,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "src/app/assembly/", "output": "/assembly" }
             ],
             "styles": [
               "src/styles.css"
