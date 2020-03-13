@@ -1,0 +1,14 @@
+= Dashboard UI
+Anthony Ikeda <anthony.ikeda@gmail.com>
+Version 0.0.1
+:listing-caption: Listing
+
+== Overview
+
+This is a base for attempting to determine how to use WebAssembly with Angular 9.
+
+First attempt uses the embedded wasm approach where we inlude the built wasm with the Angular app:
+
+* `src/app/wasm/stats_client_wasm_b.wasm`
+* `src/assets/stats_client_wasm.js`
+
