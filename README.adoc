@@ -32,3 +32,33 @@ The WebAssembly was packaged with https://rustwasm.github.io/wasm-pack/[wasm-pac
 The `stats_client_wasm.js` and `stats_client_wasm_d.wasm` files were then copied to the `src/app/assembly` directory.
 
 There is also a nodejs packaged version attached to the package.json but not imported into the project just yet - got to work out how to use it.
+
+== Progress
+
+Branch: index_import
+This branch attempts to keep the webassembly component local to the app and load it in the `index.html` file.
+
+.Loading the WebAssembly in the index page
+[source,html,numbered]
+----
+<head>
+  <meta charset="utf-8">
+  <title>DashboardUi</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    const rust = import('./assembly');
+    rust
+      .then(m => {
+        console.log(m);
+        m.process_message("Hello");
+      })
+      .catch(console.error);
+  </script>
+----
+
+The problem we have here is the fact that we get a HTTP 404 not found because we are trying to import from what looks like a route, not an actual path.
+
+Assumption: Using a HTTP server like NGINX or HTTPD might address this loading issue.
+
